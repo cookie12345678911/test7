@@ -1,14 +1,4 @@
 import PyPDF2
-class FloatObject(PyPDF2.generic.FloatObject):
-    def __add__(self, other):
-        return self.as_numeric() + other
-    def __radd__(self, other):
-        return self.as_numeric() + other
-    def __sub__(self, other):
-        return self.as_numeric() - other
-    def __rsub__(self, other):
-        return -self.as_numeric() + other
-PyPDF2.generic.FloatObject = FloatObject
 
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.enums import TA_CENTER
